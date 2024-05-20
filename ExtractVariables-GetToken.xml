@@ -1,0 +1,7 @@
+<ExtractVariables name="EV-ExtractToken">
+  <Source>response</Source>
+  <Variable name="authToken">
+    <JSONPath>$.token</JSONPath>
+  </Variable>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>
