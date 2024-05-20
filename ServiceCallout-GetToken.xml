@@ -1,0 +1,18 @@
+<ServiceCallout name="SC-GetToken">
+  <Request variable="request">
+    <Set>
+      <Verb>POST</Verb>
+      <Path>/auth/token</Path>
+      <Headers>
+        <Header name="Content-Type">application/json</Header>
+      </Headers>
+      <Payload contentType="application/json">
+        { "username": "your-username", "password": "your-password" }
+      </Payload>
+    </Set>
+  </Request>
+  <Response>SC-GetTokenResponse</Response>
+  <HTTPTargetConnection>
+    <URL>https://auth.example.com</URL>
+  </HTTPTargetConnection>
+</ServiceCallout>
