@@ -1,0 +1,9 @@
+<AssignMessage name="AM-SetAuthHeader">
+  <Add>
+    <Headers>
+      <Header name="Authorization">Bearer {authToken}</Header>
+    </Headers>
+  </Add>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
