@@ -7,16 +7,16 @@
 To achieve this in Apigee Edge, you need to configure a multi-step API proxy that first calls an authentication endpoint to retrieve a token and then uses that token to call the actual target endpoint. Here are the steps and examples of code required to set this up:
 
 ### **Step 1: Create the API Proxy**
-Login to Apigee Edge and go to the API Proxies section.
+Login to **Apigee Edge** and go to the API Proxies section.
 Click on + API Proxy to create a new proxy.
-Select Reverse Proxy, provide the necessary details (e.g., name, base path), and click Next.
-Configure the Target Endpoint to point to the actual business endpoint.
+Select **Reverse** Proxy, provide the necessary details (e.g., name, base path), and click Next.
+Configure the **Target Endpoint** to point to the actual business endpoint.
 Click Next, Next, and Build and Deploy.
 
 ### **Step 2: Configure the Authentication Call**
 Open your newly created proxy and navigate to the Develop tab.
-Create a new PreFlow in the ProxyEndpoint section.
-Add a ServiceCallout policy to call the authentication endpoint.
+Create a new **PreFlow** in the **ProxyEndpoint** section.
+Add a **ServiceCallout** policy to call the authentication endpoint.
 Extract the token from the response using an **ExtractVariables** policy.
 
 ### **Step 3: Use the Token in the Target Request**
